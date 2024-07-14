@@ -1,0 +1,144 @@
+|===============================================================================
+|
+|  DFTB+ release 24.1
+|
+|  Copyright (C) 2006 - 2024  DFTB+ developers group
+|
+|===============================================================================
+|
+|  When publishing results obtained with DFTB+, please cite the following
+|  reference:
+|
+|  * DFTB+, a software package for efficient approximate density functional
+|    theory based atomistic simulations, J. Chem. Phys. 152, 124101 (2020).
+|    [doi: 10.1063/1.5143190]
+|
+|  You should also cite additional publications crediting the parametrization
+|  data you use. Please consult the documentation of the SK-files for the
+|  references.
+|
+|===============================================================================
+
+Reading input file 'dftb_in.hsd'
+Parser version: 14
+
+--------------------------------------------------------------------------------
+***  Converting input from parser version  5 to parser version 14 ...
+WARNING!
+-> Keyword DampXH moved to HCorrection block
+Path: dftbplusinput/Hamiltonian/DFTB/DampXH
+Line: 18-18 (File: dftb_in.hsd)
+
+WARNING!
+-> Adding Damping to HCorrection
+Path: dftbplusinput/Hamiltonian/DFTB/HCorrection
+
+WARNING!
+-> Keyword renamed to 'Solver'.
+Path: dftbplusinput/Hamiltonian/DFTB/Eigensolver
+Line: 16-16 (File: dftb_in.hsd)
+
+WARNING!
+-> Keyword renamed to 'PrintForces'.
+Path: dftbplusinput/Analysis/CalculateForces
+Line: 69-69 (File: dftb_in.hsd)
+
+***  Done.
+
+Reading SK-files:
+/home/stk/skf-files/3ob-3-1/C-C.skf
+/home/stk/skf-files/3ob-3-1/C-F.skf
+/home/stk/skf-files/3ob-3-1/C-H.skf
+/home/stk/skf-files/3ob-3-1/C-N.skf
+/home/stk/skf-files/3ob-3-1/F-F.skf
+/home/stk/skf-files/3ob-3-1/F-H.skf
+/home/stk/skf-files/3ob-3-1/F-N.skf
+/home/stk/skf-files/3ob-3-1/H-H.skf
+/home/stk/skf-files/3ob-3-1/H-N.skf
+/home/stk/skf-files/3ob-3-1/N-N.skf
+Done.
+
+
+Processed input in HSD format written to 'dftb_pin.hsd'
+
+Starting initialization...
+--------------------------------------------------------------------------------
+WARNING!
+-> Dipole printed for extended system : value printed is not well defined
+OpenMP threads:              6
+Chosen random seed:          988881193
+Current stacksize:           8 [Mb] (recommended: unlimited)
+WARNING!
+-> Current stacksize not set to unlimited or hard limit, which might cause
+   random crashes (e.g. segmentation faults). It is advised to unlimit the
+   stacksize by issuing 'ulimit -s unlimited' (Linux) or setting it to the 
+   hard limit by 'ulimit -s hard' (Mac) in advance.
+Mode:                        Static calculation
+Self consistent charges:     Yes
+SCC-tolerance:                 0.100000E-04
+Max. scc iterations:                    250
+Shell resolved Hubbard:      No
+Spin polarisation:           No
+Nr. of up electrons:           972.000000
+Nr. of down electrons:         972.000000
+Periodic boundaries:         Yes
+Electronic solver:           Divide and Conquer
+Mixer:                       Broyden mixer
+Mixing parameter:                  0.200000
+Maximal SCC-cycles:                     250
+Nr. of chrg. vec. in memory:            250
+Electronic temperature:              0.100000E-07 H      0.272114E-06 eV
+Initial charges:             Read in from 'charges'
+Included shells:             C:  s, p
+                             F:  s, p
+                             H:  s
+                             N:  s, p
+K-points and weights:           1:  0.000000  0.000000  0.000000     1.000000
+
+K-points in absolute space:     1:  0.000000  0.000000  0.000000
+
+s-dftd3 library version:     1.0.0
+-> damping function:         rational damping
+Full 3rd order correction    Yes
+Damped SCC                   Yes
+Damped species(s):           H                                                 
+Extra options:
+                             Mulliken analysis
+                             Force calculation
+Force type                   original
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1    0.00000000E+00    0.00000000E+00    0.37514795E-01
+    2   -0.93649755E+03   -0.93649755E+03    0.25255387E-01
+    3   -0.93649880E+03   -0.12495503E-02    0.52584237E-02
+    4   -0.93649929E+03   -0.48653499E-03    0.18820689E-02
+    5   -0.93649932E+03   -0.36902902E-04    0.89870874E-03
+    6   -0.93649933E+03   -0.27205807E-05    0.27070269E-03
+    7   -0.93649933E+03   -0.39220254E-06    0.10676434E-03
+    8   -0.93649933E+03   -0.72300622E-07    0.39937028E-04
+    9   -0.93649933E+03   -0.91536094E-08    0.16160521E-04
+   10   -0.93649933E+03   -0.12239525E-08    0.60499777E-05
+>> Charges saved for restart in charges.bin
+
+Total Energy:                     -928.0978111806 H       -25254.8264 eV
+Extrapolated to 0K:               -928.0978111806 H       -25254.8264 eV
+Total Mermin free energy:         -928.0978111806 H       -25254.8264 eV
+Force related energy:             -928.0978111806 H       -25254.8264 eV
+
+Volume:                              0.828029E+05 au^3   0.122701E+05 A^3
+Pressure:                            0.809275E-06 au     0.238097E+08 Pa
+
+--------------------------------------------------------------------------------
+DFTB+ running times                          cpu [s]             wall clock [s]
+--------------------------------------------------------------------------------
+Pre-SCC initialisation                 +       2.43 (  1.1%)       1.33 (  1.2%)
+SCC                                    +     213.97 ( 96.1%)     106.49 ( 94.8%)
+Post-SCC processing                    +       6.22 (  2.8%)       4.54 (  4.0%)
+--------------------------------------------------------------------------------
+Missing                                +       0.01 (  0.0%)       0.01 (  0.0%)
+Total                                  =     222.62 (100.0%)     112.36 (100.0%)
+--------------------------------------------------------------------------------

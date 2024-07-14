@@ -1,0 +1,33 @@
+
+
+jobtype = qm-md; dim = 3d;
+
+nstep= 10; timestep = 2.0;
+
+output_freq = 1;
+
+thermostat = nh-chain; temp = 298.15; t_relaxation = 0.1;
+
+nh-chain_length = 5;
+
+#manostat = berendsen; p_relaxation = 5.0; pressure = 1.013;
+
+#isotropy = xy;
+
+integrator = v-verlet;  
+      
+
+qm_prog = dftbplus;  qm_script = dftbplus_periodic_stress;
+
+floating_point_type = float;
+dispersion = true;
+virial = atomic;
+#shake = on;
+      
+
+start_file   = fcof.rst;
+
+file_prefix = fcof-NVT-01;
+
+            
+#topology_file = shake_bonds.top;

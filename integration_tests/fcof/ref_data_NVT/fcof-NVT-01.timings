@@ -1,0 +1,61 @@
+Section                       	  Time [s]	  Time [%]
+------------------------------	----------	----------
+
+Total                         	   341.746	   100.000
+
+Output                        	     0.060	     0.018
+Setup                         	     0.005	     0.001
+Integrator                    	     0.001	     0.000
+Thermostat                    	     0.000	     0.000
+Constraints                   	     0.000	     0.000
+Cell List                     	     0.000	     0.000
+Potential                     	     0.000	     0.000
+IntraNonBonded                	     0.000	     0.000
+Virial                        	     0.000	     0.000
+Physical Data                 	     0.000	     0.000
+Manostat                      	     0.000	     0.000
+Reset Kinetics                	     0.000	     0.000
+QM Engine                     	     0.000	     0.000
+
+
+
+
+Section                       	  Time [s]	  Time [%]	  RelT [%]
+------------------------------	----------	----------	----------
+
+Total                         	   341.746	   100.000	   100.000
+
+Output                        	     0.060	     0.018	   100.000
+TrajectoryOutput              	     0.032	   100.000	    52.637
+RstFileOutput                 	     0.028	   100.000	    47.262
+InfoOutput                    	     0.001	   100.000	     2.324
+VirialOutput                  	     0.000	   100.000	     0.794
+EnergyOutput                  	     0.000	   100.000	     0.702
+InstantEnergyOutput           	     0.000	   100.000	     0.595
+StressOutput                  	     0.000	   100.000	     0.583
+BoxFileOutput                 	     0.000	   100.000	     0.568
+MomentumOutput                	     0.000	   100.000	     0.561
+
+Setup                         	     0.005	     0.001	   100.000
+TotalSetup                    	     0.005	   100.000	   108.524
+
+Integrator                    	     0.001	     0.000	   100.000
+Velocity Verlet - First Step  	     0.001	   100.000	   106.412
+Velocity Verlet - Second Step 	     0.000	   100.000	    26.843
+
+Thermostat                    	     0.000	     0.000	   100.000
+Nose-Hoover - Forces          	     0.000	   100.000	       inf
+Nose-Hoover - Velocities      	     0.000	   100.000	       inf
+
+Constraints                   	     0.000	     0.000	   100.000
+Reference Bond Data           	     0.000	   100.000	       inf
+
+Physical Data                 	     0.000	     0.000	   100.000
+Calc Kinetics                 	     0.001	   100.000	       inf
+
+Manostat                      	     0.000	     0.000	   100.000
+Calc Pressure                 	     0.000	   100.000	       inf
+
+Reset Kinetics                	     0.000	     0.000	   100.000
+Reset Kinetics                	     0.000	   100.000	       inf
+

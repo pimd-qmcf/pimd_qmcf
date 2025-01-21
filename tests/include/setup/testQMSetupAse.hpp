@@ -20,38 +20,34 @@
 <GPL_HEADER>
 ******************************************************************************/
 
-#ifndef _QM_SETUP_HPP_
+#ifndef _TEST_QMSETUP_ASE_HPP_
 
-#define _QM_SETUP_HPP_
+#define _TEST_QMSETUP_ASE_HPP_
 
-#include "typeAliases.hpp"
+#include "logOutput.hpp"   // for LogOutput
 
-namespace setup
+#include <gtest/gtest.h>   // for Test
+#include <memory>          // for allocator
+#include <stdio.h>         // for remove
+
+/**
+ * @class TestQMSetupAse
+ *
+ * @brief test suite for QMSetup ase Runner
+ *
+ */
+class TestQMSetupAse : public ::testing::Test
 {
-    void setupQM(pq::Engine &);
+  protected:
+    void SetUp() override { _logOutput = new output::LogOutput("default.log"); }
 
-    /**
-     * @class QMSetup
-     *
-     * @brief Setup QM
-     *
-     */
-    class QMSetup
+    void TearDown() override
     {
-       private:
-        pq::QMMDEngine &_engine;
+        delete _logOutput;
+        ::remove("default.log");
+    }
 
-       public:
-        explicit QMSetup(pq::QMMDEngine &engine);
+    output::LogOutput *_logOutput;
+};
 
-        void setup();
-        void setupQMMethod();
-        void setupQMMethodAseDftbPlus();
-        void setupQMScript() const;
-        void setupCoulombRadiusCutOff() const;
-        void setupWriteInfo() const;
-    };
-
-}   // namespace setup
-
-#endif   // _QM_SETUP_HPP_
+#endif   // _TEST_QMSETUP_ASE_HPP_
